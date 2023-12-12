@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Contact Us Form HTML CSS | CodingNepal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+          <form action="optencryption" method="post">
+
+            <div class="topic">OTP encryption Page</div>
+            <div class="input-box">
+              <input type="text" name ="message" required/>
+              <label> YOUR MESSGADE: {{MESS}} </label>
+            </div>
+            <div class="input-box" name="otpkey">
+              <input type="text" disabled />
+              <label>kEY IS: {{OTPKEY}} </label>
+            </div>
+            <div class="input-box" name="ciphertxt">
+              <input type="text" disabled />
+              <label>CHIPER TEXT IS:  {{cipher}} </label>
+            </div>
+            <div class="input-box">
+              <input type="submit" value="Send Message" />
+            </div>
+          </form>
+
+          <div class="image-box">
+            <img src="static\contact.png" alt="" />
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
